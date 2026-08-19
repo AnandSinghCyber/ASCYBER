@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Linux | ASCyber</title>
+    <title>Linux Basics | ASCyber</title>
+    <meta name="description" content="Learn Linux fundamentals: The file system, permissions, and essential commands.">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/article.css">
     <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
@@ -20,19 +22,69 @@
                         <li><a href="programming.html">Programming</a></li>
                         <li><a href="networking.html">Networking</a></li>
                         <li><a href="linux.html" class="active">Linux</a></li>
-                        <li><a href="about.html">About</a></li>
+                        <li><a href="https://ascyberblog.blogspot.com" target="_blank" rel="noopener">Blog</a></li>
                     </ul>
                 </nav>
             </div>
         </div>
     </header>
 
-    <section class="section-padding">
-        <div class="container">
-            <h1 class="section-title"><span class="accent-text">Linux</span> Mastery</h1>
-            <p>From essential commands to system administration and scripting.</p>
-        </div>
-    </section>
+    <main class="article-container">
+        <article class="article-content">
+            <header class="article-header">
+                <h1>Linux Basics for Security Professionals</h1>
+                <div class="article-meta">
+                    <span class="author">By Anand Singh</span>
+                    <span class="date">Updated August 2026</span>
+                </div>
+            </header>
+
+            <section class="article-body">
+                <p class="lead">Windows is great for gaming, and macOS is great for design. But the internet runs on Linux. From massive web servers to the router in your living room, Linux is everywhere. If you want to master cybersecurity, you must master the Linux command line.</p>
+
+                <h2>1. The Linux File System Hierarchy</h2>
+                <p>Unlike Windows, which uses <code>C:\</code> and <code>D:\</code> drives, Linux treats everything as a unified tree structure starting at the root (<code>/</code>).</p>
+                <ul>
+                    <li><code>/</code> : The Root directory. Everything starts here.</li>
+                    <li><code>/bin</code> : Essential user binaries (commands like <code>ls</code>, <code>cat</code>).</li>
+                    <li><code>/etc</code> : System configuration files (this is where hackers look for misconfigurations).</li>
+                    <li><code>/home</code> : Personal directories for users (e.g., <code>/home/anand</code>).</li>
+                    <li><code>/var</code> : Variable data, like system logs (<code>/var/log</code>) and web server files (<code>/var/www/html</code>).</li>
+                </ul>
+
+                <h2>2. Understanding Permissions</h2>
+                <p>Linux is a multi-user environment, so security is baked into the file system. Every file and directory has permissions that control who can Read (<code>r</code>), Write (<code>w</code>), or eXecute (<code>x</code>) it.</p>
+                <p>Permissions are broken into three categories:</p>
+                <ol>
+                    <li><strong>User (u):</strong> The owner of the file.</li>
+                    <li><strong>Group (g):</strong> Users who are in the file's group.</li>
+                    <li><strong>Others (o):</strong> Everyone else.</li>
+                </ol>
+                <div class="code-block">
+                    <div class="code-header"><span class="language">bash</span></div>
+                    <pre><code>$ ls -l
+-rwxr-xr-- 1 anand admin 1024 Aug 19 script.sh</code></pre>
+                </div>
+                <p>In the example above, <code>-rwxr-xr--</code> means the owner (anand) can read, write, and execute. The group (admin) can read and execute. Everyone else can only read.</p>
+
+                <h2>3. Essential Commands Cheat Sheet</h2>
+                <p>You need to be comfortable navigating the terminal without a mouse. Memorize these:</p>
+
+                <div class="code-block">
+                    <pre><code>pwd          # Print Working Directory (where am I?)
+ls -la       # List all files, including hidden ones, with permissions
+cd /etc      # Change Directory to /etc
+cat file.txt # Read the contents of file.txt to the screen
+grep "error" # Search for the word "error" in text or output
+sudo command # Execute a command with Root (Superuser) privileges
+chmod +x app # Make a file executable</code></pre>
+                </div>
+
+                <h2>Next Steps</h2>
+                <p>Once you are comfortable moving around Linux, it's time to start writing scripts to automate tasks. Check out <a href="programming.html">Programming Fundamentals</a>.</p>
+            </section>
+        </article>
+    </main>
 
     <footer class="site-footer">
         <div class="container">

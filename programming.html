@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Programming | ASCyber</title>
+    <title>Programming Basics | ASCyber</title>
+    <meta name="description" content="Learn why programming is essential for cybersecurity. Python, Bash, and Web Basics.">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/article.css">
     <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
@@ -20,19 +22,75 @@
                         <li><a href="programming.html" class="active">Programming</a></li>
                         <li><a href="networking.html">Networking</a></li>
                         <li><a href="linux.html">Linux</a></li>
-                        <li><a href="about.html">About</a></li>
+                        <li><a href="https://ascyberblog.blogspot.com" target="_blank" rel="noopener">Blog</a></li>
                     </ul>
                 </nav>
             </div>
         </div>
     </header>
 
-    <section class="section-padding">
-        <div class="container">
-            <h1 class="section-title"><span class="accent-text">Programming</span> Guides</h1>
-            <p>Learn Python, C/C++, JavaScript, and automate security tasks.</p>
-        </div>
-    </section>
+    <main class="article-container">
+        <article class="article-content">
+            <header class="article-header">
+                <h1>Programming for Cybersecurity</h1>
+                <div class="article-meta">
+                    <span class="author">By Anand Singh</span>
+                    <span class="date">Updated August 2026</span>
+                </div>
+            </header>
+
+            <section class="article-body">
+                <p class="lead">You don't need to be a software developer to be in cybersecurity, but you absolutely need to know how to read code, write scripts, and automate your workflows. If you rely entirely on other people's tools, you will eventually hit a wall.</p>
+
+                <h2>1. Python: The King of Cyber Scripting</h2>
+                <p>Python is simple to read, incredibly powerful, and has a massive library of networking and security tools. It is the language of choice for building custom exploits, malware analysis, and network scanners.</p>
+                <p>Here is an example of how simple it is to write a basic Port Scanner in Python:</p>
+                
+                <div class="code-block">
+                    <div class="code-header"><span class="language">python</span></div>
+                    <pre><code>import socket
+
+target = "192.168.1.5"
+port = 80
+
+s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+s.settimeout(1)
+
+result = s.connect_ex((target, port))
+if result == 0:
+    print(f"Port {port} is OPEN!")
+else:
+    print(f"Port {port} is CLOSED.")
+s.close()</code></pre>
+                </div>
+
+                <h2>2. Bash: Automating the Terminal</h2>
+                <p>Bash (the default language of the Linux terminal) is essential for quickly tying different commands together. If you find yourself typing the same three commands over and over, you should write a Bash script.</p>
+                
+                <div class="code-block">
+                    <div class="code-header"><span class="language">bash</span></div>
+                    <pre><code>#!/bin/bash
+# A simple script to find all active IP addresses on a network
+
+for ip in $(seq 1 254); do
+    ping -c 1 192.168.1.$ip | grep "64 bytes" | cut -d " " -f 4 | tr -d ":" &
+done</code></pre>
+                </div>
+                <p><em>The above script rapidly pings every IP address on a local network to see who is online.</em></p>
+
+                <h2>3. The Web Trio: HTML, JS, & SQL</h2>
+                <p>If you are interested in Bug Bounties or Web Application Penetration Testing, you must understand how the web is built:</p>
+                <ul>
+                    <li><strong>HTML/CSS:</strong> Forms the structure of a site. Hackers look for hidden form fields or developer comments.</li>
+                    <li><strong>JavaScript (JS):</strong> Runs in the browser. Knowing JS is mandatory for executing Cross-Site Scripting (XSS) attacks.</li>
+                    <li><strong>SQL:</strong> The language of databases. Understanding SQL is required to perform SQL Injection (SQLi) and steal data.</li>
+                </ul>
+
+                <h2>Next Steps</h2>
+                <p>Now that you have the foundational theory, it's time to look at the professional software used in the industry. Check out <a href="tools.html">Essential Security Tools</a>.</p>
+            </section>
+        </article>
+    </main>
 
     <footer class="site-footer">
         <div class="container">

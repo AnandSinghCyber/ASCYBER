@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Networking | ASCyber</title>
+    <title>Networking Basics | ASCyber</title>
+    <meta name="description" content="Learn how computers talk to each other. IP addresses, the OSI model, and essential protocols.">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/article.css">
     <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
@@ -20,19 +22,69 @@
                         <li><a href="programming.html">Programming</a></li>
                         <li><a href="networking.html" class="active">Networking</a></li>
                         <li><a href="linux.html">Linux</a></li>
-                        <li><a href="about.html">About</a></li>
+                        <li><a href="https://ascyberblog.blogspot.com" target="_blank" rel="noopener">Blog</a></li>
                     </ul>
                 </nav>
             </div>
         </div>
     </header>
 
-    <section class="section-padding">
-        <div class="container">
-            <h1 class="section-title">Computer <span class="accent-text">Networking</span></h1>
-            <p>Understand the backbone of the internet and how data moves securely.</p>
-        </div>
-    </section>
+    <main class="article-container">
+        <article class="article-content">
+            <header class="article-header">
+                <h1>Networking Fundamentals for Hackers</h1>
+                <div class="article-meta">
+                    <span class="author">By Anand Singh</span>
+                    <span class="date">Updated August 2026</span>
+                </div>
+            </header>
+
+            <section class="article-body">
+                <p class="lead">You cannot hack a system if you don't know how to reach it. Networking is the study of how computers communicate. It is arguably the most important foundational skill for any cybersecurity professional.</p>
+
+                <h2>1. IP vs MAC Addresses</h2>
+                <p>Every device connected to a network needs a way to be identified.</p>
+                <ul>
+                    <li><strong>IP Address (Internet Protocol):</strong> Think of this like your home address (e.g., 123 Main St). It tells the internet where to send data. It can change if you move to a different coffee shop. Example: <code>192.168.1.5</code></li>
+                    <li><strong>MAC Address (Media Access Control):</strong> Think of this as your Social Security Number. It is physically burned into your computer's network card at the factory and (theoretically) never changes. Example: <code>00:1A:2B:3C:4D:5E</code></li>
+                </ul>
+
+                <h2>2. The OSI Model</h2>
+                <p>The Open Systems Interconnection (OSI) model is a conceptual framework used to describe how data travels over a network from one computer to another. It has 7 layers:</p>
+                
+                <ol reversed>
+                    <li><strong>Application (Layer 7):</strong> What you see (Web browsers, HTTP, FTP).</li>
+                    <li><strong>Presentation (Layer 6):</strong> Data translation and encryption (JPEG, TLS).</li>
+                    <li><strong>Session (Layer 5):</strong> Manages connections and sessions between apps.</li>
+                    <li><strong>Transport (Layer 4):</strong> How data is sent. <strong>TCP</strong> (reliable, checks for errors) vs <strong>UDP</strong> (fast, streams video, no error checking).</li>
+                    <li><strong>Network (Layer 3):</strong> Routing data across the internet using IP Addresses. (Routers live here).</li>
+                    <li><strong>Data Link (Layer 2):</strong> Local network communication using MAC addresses. (Switches live here).</li>
+                    <li><strong>Physical (Layer 1):</strong> The actual cables, radio waves, and electricity.</li>
+                </ol>
+
+                <blockquote>
+                    <p><strong>Hacker Tip:</strong> When a DDoS attack happens, it targets a specific layer. A "Volumetric Attack" hits Layer 3 or 4, overwhelming the router. An "Application Attack" hits Layer 7, overwhelming the web server software.</p>
+                </blockquote>
+
+                <h2>3. Essential Ports and Protocols</h2>
+                <p>If an IP address is a house, a <strong>Port</strong> is a specific door or window on that house. There are 65,535 possible ports. Different services run on different ports:</p>
+
+                <div class="code-block">
+                    <pre><code>Port 21: FTP (File Transfer - Unsecure)
+Port 22: SSH (Secure Shell - Remote access)
+Port 53: DNS (Domain Name System - Converts google.com to an IP)
+Port 80: HTTP (Web Traffic - Unsecure)
+Port 443: HTTPS (Web Traffic - Encrypted/Secure)
+Port 3389: RDP (Remote Desktop Protocol)</code></pre>
+                </div>
+
+                <p>When you use a tool like Nmap, you are basically "knocking" on all 65,535 doors of a house to see which ones are unlocked and who answers the door.</p>
+
+                <h2>Next Steps</h2>
+                <p>Understanding the theory is great, but now you need an OS that lets you manipulate these packets. Head over to <a href="linux.html">Linux Fundamentals</a>.</p>
+            </section>
+        </article>
+    </main>
 
     <footer class="site-footer">
         <div class="container">

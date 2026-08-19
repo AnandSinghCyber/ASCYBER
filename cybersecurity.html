@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cybersecurity | ASCyber</title>
+    <title>Cybersecurity Basics | ASCyber</title>
+    <meta name="description" content="Master the fundamentals of information security, defensive techniques, and modern threats.">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/article.css">
     <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
@@ -20,19 +22,72 @@
                         <li><a href="programming.html">Programming</a></li>
                         <li><a href="networking.html">Networking</a></li>
                         <li><a href="linux.html">Linux</a></li>
-                        <li><a href="about.html">About</a></li>
+                        <li><a href="https://ascyberblog.blogspot.com" target="_blank" rel="noopener">Blog</a></li>
                     </ul>
                 </nav>
             </div>
         </div>
     </header>
 
-    <section class="section-padding">
-        <div class="container">
-            <h1 class="section-title"><span class="accent-text">Cybersecurity</span> Fundamentals</h1>
-            <p>Master the principles of information security, defensive techniques, and modern threats.</p>
-        </div>
-    </section>
+    <main class="article-container">
+        <article class="article-content">
+            <header class="article-header">
+                <h1>Cybersecurity Fundamentals: The Ultimate Guide for Beginners</h1>
+                <div class="article-meta">
+                    <span class="author">By Anand Singh</span>
+                    <span class="date">Updated August 2026</span>
+                </div>
+            </header>
+
+            <section class="article-body">
+                <p class="lead">Cybersecurity is the practice of protecting systems, networks, and programs from digital attacks. Whether you want to become a professional ethical hacker or just secure your own data, understanding the fundamentals is the first step.</p>
+
+                <h2>1. The Core of Security: The CIA Triad</h2>
+                <p>Every security strategy in the world—from protecting your personal email to securing military networks—revolves around three core principles known as the <strong>CIA Triad</strong>.</p>
+                <ul>
+                    <li><strong>Confidentiality:</strong> Ensuring that data is only accessible to those authorized to view it. <em>(Example: Encrypting your passwords so hackers can't read them.)</em></li>
+                    <li><strong>Integrity:</strong> Ensuring that data is accurate and has not been tampered with. <em>(Example: Making sure a bank transfer of $10 isn't maliciously changed to $10,000 in transit.)</em></li>
+                    <li><strong>Availability:</strong> Ensuring that systems and data are accessible to authorized users when needed. <em>(Example: Preventing a website from going down during a DDoS attack.)</em></li>
+                </ul>
+
+                <blockquote>
+                    <p><strong>Security is a balance.</strong> If you unplug a computer and bury it underground, it has perfect Confidentiality and Integrity, but zero Availability. The goal is balancing all three.</p>
+                </blockquote>
+
+                <h2>2. The Teams: Red vs. Blue</h2>
+                <p>In the cybersecurity industry, professionals are generally split into two primary factions:</p>
+                
+                <h3>🔴 The Red Team (Offense)</h3>
+                <p>Red teamers act as the adversaries. They are "ethical hackers" or penetration testers hired to attack an organization's systems to find vulnerabilities before the real bad guys do. They use the same tools and techniques as malicious hackers.</p>
+                
+                <h3>🔵 The Blue Team (Defense)</h3>
+                <p>Blue teamers are the defenders. They monitor networks, configure firewalls, analyze logs, and respond to incidents. While hacking sounds glamorous, Blue Teamers are the essential backbone of any organization's security posture.</p>
+
+                <h2>3. Common Threats & Attacks</h2>
+                <p>To defend a system, you must know how it can be attacked. Here are the most common threats you will encounter:</p>
+
+                <h3>Social Engineering</h3>
+                <p>The easiest way into a system isn't breaking the firewall; it's asking someone for the password. Social engineering involves manipulating people into giving up confidential information. <strong>Phishing</strong> (fake emails pretending to be a bank) is the most common form.</p>
+
+                <h3>Malware & Ransomware</h3>
+                <p>Malware is malicious software designed to cause harm. <strong>Ransomware</strong> is a specific type of malware that encrypts all of a victim's files and demands a cryptocurrency payment to unlock them.</p>
+
+                <h3>SQL Injection (SQLi)</h3>
+                <p>When a website asks for a username, but a hacker enters a database command instead. If the website isn't secure, it will execute the command and potentially leak millions of user passwords.</p>
+                <div class="code-block">
+                    <div class="code-header">
+                        <span class="language">sql</span>
+                    </div>
+                    <pre><code>SELECT * FROM users WHERE username = 'admin' OR '1'='1'</code></pre>
+                </div>
+                <p><em>The above code tricks the database into returning all users because '1'='1' is always true!</em></p>
+
+                <h2>Where to Go From Here?</h2>
+                <p>You cannot secure a network if you don't know how networks work. You cannot hack a web app if you don't understand how it's programmed.</p>
+                <p>To continue your journey, proceed to <a href="networking.html">Networking Fundamentals</a> and <a href="linux.html">Linux Basics</a>.</p>
+            </section>
+        </article>
+    </main>
 
     <footer class="site-footer">
         <div class="container">

@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tools | ASCyber</title>
+    <title>Security Tools | ASCyber</title>
+    <meta name="description" content="Discover the essential tools used by cybersecurity professionals: Nmap, Wireshark, Burp Suite, and more.">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/article.css">
     <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
@@ -20,19 +22,56 @@
                         <li><a href="programming.html">Programming</a></li>
                         <li><a href="networking.html">Networking</a></li>
                         <li><a href="linux.html">Linux</a></li>
-                        <li><a href="tools.html" class="active">Tools</a></li>
+                        <li><a href="https://ascyberblog.blogspot.com" target="_blank" rel="noopener">Blog</a></li>
                     </ul>
                 </nav>
             </div>
         </div>
     </header>
 
-    <section class="section-padding">
-        <div class="container">
-            <h1 class="section-title">Free <span class="accent-text">Tools</span></h1>
-            <p>A collection of free, browser-based utilities for developers and security researchers.</p>
-        </div>
-    </section>
+    <main class="article-container">
+        <article class="article-content">
+            <header class="article-header">
+                <h1>Essential Tools of the Trade</h1>
+                <div class="article-meta">
+                    <span class="author">By Anand Singh</span>
+                    <span class="date">Updated August 2026</span>
+                </div>
+            </header>
+
+            <section class="article-body">
+                <p class="lead">A professional is only as good as their tools. In cybersecurity, we use specialized software to analyze networks, intercept traffic, and test vulnerabilities. Here are the "Big Four" tools every beginner must learn.</p>
+
+                <h2>1. Nmap (Network Mapper)</h2>
+                <p>Nmap is the undisputed king of network reconnaissance. It is a free, open-source tool used to discover hosts and services on a computer network by sending packets and analyzing the responses.</p>
+                <ul>
+                    <li><strong>Use Case:</strong> Finding out which computers are active on a network and what ports (doors) are open.</li>
+                    <li><strong>Basic Command:</strong> <code>nmap -sV 192.168.1.1</code> (Scans the target and attempts to determine the version of software running on open ports).</li>
+                </ul>
+
+                <h2>2. Wireshark</h2>
+                <p>Wireshark is a network protocol analyzer. It allows you to see what's happening on your network at a microscopic level. It literally captures the data packets flying through the air or cables.</p>
+                <ul>
+                    <li><strong>Use Case:</strong> Troubleshooting network issues, or spying on unencrypted traffic to steal passwords (e.g., HTTP or FTP traffic).</li>
+                    <li><strong>Key Feature:</strong> Display filters allow you to isolate exactly what you are looking for out of millions of packets.</li>
+                </ul>
+
+                <h2>3. Burp Suite</h2>
+                <p>Burp Suite is the industry standard for web application security testing. It acts as a "proxy" that sits between your web browser and the internet.</p>
+                <ul>
+                    <li><strong>Use Case:</strong> Intercepting a request you make to a website (like logging in), pausing it, altering the data (like changing your username to an SQL injection payload), and then forwarding it to the server.</li>
+                    <li><strong>Key Feature:</strong> The "Repeater" tab allows you to send the same request over and over with minor tweaks to test for vulnerabilities.</li>
+                </ul>
+
+                <h2>4. Metasploit Framework</h2>
+                <p>Developed by Rapid7, Metasploit is the world's most used penetration testing framework. It contains a massive database of known exploits.</p>
+                <ul>
+                    <li><strong>Use Case:</strong> Once you find a vulnerability using Nmap, you use Metasploit to launch a pre-written "exploit" to gain access to the system and deploy a "payload" (like a reverse shell).</li>
+                    <li><strong>Warning:</strong> Always ensure you have explicit, written permission before aiming Metasploit at any target.</li>
+                </ul>
+            </section>
+        </article>
+    </main>
 
     <footer class="site-footer">
         <div class="container">
