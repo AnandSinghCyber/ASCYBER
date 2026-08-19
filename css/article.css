@@ -1,0 +1,175 @@
+/* 
+ * ASCyber Article Styles
+ * Premium Reading Experience
+ */
+
+/* Article Layout */
+.article-main {
+    background-color: var(--bg-dark);
+}
+
+.article-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.article-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.article-title {
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin: 16px 0;
+    color: var(--text-main);
+}
+
+.article-meta {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    flex-wrap: wrap;
+}
+
+.article-meta span {
+    position: relative;
+}
+
+.article-meta span:not(:last-child)::after {
+    content: '•';
+    position: absolute;
+    right: -12px;
+    color: var(--text-muted);
+}
+
+.article-meta strong {
+    color: var(--accent-primary);
+    font-weight: 600;
+}
+
+.article-feature-image {
+    width: 100%;
+    height: 400px;
+    border-radius: var(--border-radius);
+    margin-bottom: 40px;
+}
+
+/* Article Typography */
+.article-body {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: #d1d5db;
+}
+
+.article-body .lead {
+    font-size: 1.3rem;
+    color: var(--text-main);
+    margin-bottom: 32px;
+    font-weight: 300;
+}
+
+.article-body h2 {
+    font-size: 2rem;
+    color: var(--text-main);
+    margin-top: 48px;
+    margin-bottom: 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 8px;
+}
+
+.article-body h3 {
+    font-size: 1.5rem;
+    color: var(--text-main);
+    margin-top: 32px;
+    margin-bottom: 16px;
+}
+
+.article-body p {
+    margin-bottom: 24px;
+}
+
+.article-body ul, .article-body ol {
+    margin-bottom: 24px;
+    padding-left: 24px;
+}
+
+.article-body li {
+    margin-bottom: 10px;
+}
+
+.article-body li::marker {
+    color: var(--accent-primary);
+}
+
+/* Blockquotes */
+.article-body blockquote {
+    border-left: 4px solid var(--accent-secondary);
+    padding: 16px 24px;
+    margin: 32px 0;
+    background-color: var(--bg-panel);
+    font-style: italic;
+    font-size: 1.25rem;
+    color: var(--text-main);
+    border-radius: 0 var(--border-radius) var(--border-radius) 0;
+}
+
+/* Code Blocks */
+.article-body pre {
+    background-color: #0d1117;
+    padding: 20px;
+    border-radius: var(--border-radius);
+    overflow-x: auto;
+    margin: 32px 0;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.article-body code {
+    font-family: var(--font-mono);
+    color: var(--accent-tertiary);
+    font-size: 0.95rem;
+}
+
+/* Inline code */
+.article-body p code {
+    background-color: var(--bg-panel);
+    padding: 2px 6px;
+    border-radius: 4px;
+    color: var(--accent-primary);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Author Bio Box */
+.article-author-bio {
+    display: flex;
+    gap: 20px;
+    background-color: var(--bg-panel);
+    padding: 30px;
+    border-radius: var(--border-radius);
+    margin-top: 60px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    align-items: center;
+}
+
+.bio-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.bio-text h4 {
+    font-size: 1.2rem;
+    color: var(--text-main);
+    margin-bottom: 4px;
+}
+
+.bio-text p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    margin: 0;
+}
