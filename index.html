@@ -44,6 +44,16 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/search.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <!-- Google Analytics Placeholder -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    <!-- Google AdSense Placeholder -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
 </head>
 <body>
     <!-- Header -->
@@ -148,6 +158,26 @@
                         <a href="#" class="read-more">Read More →</a>
                     </div>
                 </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section section">
+        <div class="container">
+            <div class="newsletter-inner">
+                <div class="newsletter-content">
+                    <h2>Join the ASCyber Intel Feed</h2>
+                    <p>Get the latest cybersecurity tutorials, tool breakdowns, and industry news delivered straight to your inbox. No spam, just pure signal.</p>
+                </div>
+                <div class="newsletter-form-wrapper">
+                    <!-- Replace action URL with your Mailchimp/Formspree/ConvertKit URL -->
+                    <form action="#" method="POST" class="newsletter-form">
+                        <input type="email" name="email" placeholder="Enter your email address..." required aria-label="Email address">
+                        <button type="submit" class="btn">Subscribe <span class="arrow">→</span></button>
+                    </form>
+                    <p class="privacy-note">By subscribing, you agree to our <a href="privacy-policy.html">Privacy Policy</a>.</p>
+                </div>
             </div>
         </div>
     </section>
