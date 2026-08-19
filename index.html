@@ -41,6 +41,7 @@
     
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/search.css">
     <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
@@ -51,11 +52,17 @@
                 <a href="index.html" class="logo">
                     <span class="logo-accent">></span> ASCyber<span class="cursor">_</span>
                 </a>
-                <button class="mobile-menu-toggle" aria-label="Toggle Menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
+                <div class="header-actions">
+                    <div class="search-container">
+                        <input type="text" id="site-search" placeholder="Search..." aria-label="Search site">
+                        <div id="search-results" class="search-results-dropdown hidden"></div>
+                    </div>
+                    <button class="mobile-menu-toggle" aria-label="Toggle Menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
                 <nav class="main-nav">
                     <ul>
                         <li><a href="index.html" class="active">Home</a></li>
@@ -188,5 +195,6 @@
 
     <!-- Scripts -->
     <script src="js/main.js"></script>
+    <script src="js/search.js"></script>
 </body>
 </html>
