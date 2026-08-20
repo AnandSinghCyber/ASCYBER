@@ -91,6 +91,23 @@ Port 3389: RDP (Remote Desktop Protocol)</code></pre>
 
                 <p>When you use a tool like Nmap, you are basically "knocking" on all 65,535 doors of a house to see which ones are unlocked and who answers the door.</p>
 
+                <h2>4. The TCP/IP Model vs OSI Model</h2>
+                <p>While the OSI model is great for theory, the modern internet actually runs on a simpler, 4-layer model called the <strong>TCP/IP Model</strong>. It condenses the top three OSI layers into one.</p>
+                <ol>
+                    <li><strong>Application Layer:</strong> Combines OSI Layers 5, 6, and 7. Handles high-level protocols like HTTP, DNS, and SSH.</li>
+                    <li><strong>Transport Layer:</strong> Matches OSI Layer 4. Manages host-to-host communication using TCP and UDP.</li>
+                    <li><strong>Internet Layer:</strong> Matches OSI Layer 3. Routes packets across networks using IP.</li>
+                    <li><strong>Network Access Layer:</strong> Combines OSI Layers 1 and 2. Handles the physical connection and MAC addressing.</li>
+                </ol>
+
+                <h2>5. IP Addressing & Subnetting</h2>
+                <p>Understanding how networks are divided is crucial for both setting them up and attacking them.</p>
+                <ul>
+                    <li><strong>IPv4 vs IPv6:</strong> The world ran out of IPv4 addresses (like <code>192.168.1.1</code>), so IPv6 was introduced, using much longer alphanumeric strings (like <code>2001:0db8:85a3:0000:0000:8a2e:0370:7334</code>).</li>
+                    <li><strong>Public vs Private IPs:</strong> Your router has a Public IP facing the internet, but gives Private IPs (like 192.168.x.x or 10.x.x.x) to your devices at home. <strong>NAT (Network Address Translation)</strong> lets them all share the public IP.</li>
+                    <li><strong>Subnetting:</strong> The process of dividing a large network into smaller, more manageable sub-networks. It improves security by isolating different departments (e.g., separating the guest Wi-Fi from the corporate database) and reduces broadcast traffic.</li>
+                </ul>
+
                 <h2>Next Steps</h2>
                 <p>Understanding the theory is great, but now you need an OS that lets you manipulate these packets. Head over to <a href="linux.html">Linux Fundamentals</a>.</p>
             </section>

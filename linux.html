@@ -91,6 +91,24 @@ sudo command # Execute a command with Root (Superuser) privileges
 chmod +x app # Make a file executable</code></pre>
                 </div>
 
+                <h2>4. Process Management & Networking</h2>
+                <p>Linux gives you ultimate control over what is running on your machine. Hackers use these commands to hide their malware or find vulnerable services running in the background.</p>
+                <div class="code-block">
+                    <pre><code>top or htop   # View live system processes and resource usage
+ps aux        # List every single process currently running
+kill -9 [PID] # Forcefully terminate a process by its ID
+netstat -tulpn # See what ports are open and listening for connections
+ping 8.8.8.8  # Test connectivity to the internet (Google's DNS)</code></pre>
+                </div>
+
+                <h2>5. Privilege Escalation (Getting Root)</h2>
+                <p>When a hacker compromises a server, they usually gain access as a low-level, unprivileged user (like `www-data`). Their next goal is <strong>Privilege Escalation</strong>—tricking the system into giving them <code>root</code> (administrator) access.</p>
+                <ul>
+                    <li><strong>SUID Binaries:</strong> Certain files are configured to temporarily execute with the owner's privileges (often root). If a hacker can manipulate how these binaries run, they can spawn a root shell.</li>
+                    <li><strong>Sudo Misconfigurations:</strong> Sometimes administrators allow regular users to run specific commands as root without a password. Hackers exploit this to break out of the restricted command and get a full shell.</li>
+                    <li><strong>Kernel Exploits:</strong> Taking advantage of a bug in the core Linux operating system (the Kernel) to force it to grant root access. (e.g., Dirty COW).</li>
+                </ul>
+
                 <h2>Next Steps</h2>
                 <p>Once you are comfortable moving around Linux, it's time to start writing scripts to automate tasks. Check out <a href="programming.html">Programming Fundamentals</a>.</p>
             </section>
