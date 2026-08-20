@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Quantum Threat to Modern Cryptography | ASCyber</title>
+    <meta name="description" content="Explore how quantum computing threatens RSA and ECC encryption, and what Post-Quantum Cryptography means for the future of security.">
+    <link rel="canonical" href="https://anandsinghcyber.github.io/ASCYBER/article-quantum-crypto.html">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/article.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <div class="header-inner">
+                <a href="index.html" class="logo"><span class="logo-accent">></span> ASCyber<span class="cursor">_</span></a>
+                <button class="mobile-menu-toggle" aria-label="Toggle Menu"><span></span><span></span><span></span></button>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="cybersecurity.html">Cybersecurity</a></li>
+                        <li><a href="programming.html">Programming</a></li>
+                        <li><a href="networking.html">Networking</a></li>
+                        <li><a href="linux.html">Linux</a></li>
+                        <li><a href="tutorials.html">Tutorials</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="article-main section-padding">
+        <article class="article-container reveal">
+            <header class="article-header">
+                <span class="category-tag">Cryptography / Future Tech</span>
+                <h1 class="article-title">The Quantum Threat to Modern Cryptography</h1>
+                <div class="article-meta">
+                    <span class="author">By <strong>Anand Singh</strong></span>
+                    <span class="date">August 20, 2026</span>
+                    <span class="read-time">10 min read</span>
+                </div>
+            </header>
+            
+            <div class="article-body">
+                <p class="lead">Every time you send a secure message, log into your bank, or browse a website starting with HTTPS, you are relying on asymmetric cryptography. Specifically, you are relying on the fact that classical computers are terrible at factoring massive prime numbers. But what happens when classical computers are replaced by quantum ones?</p>
+                
+                <h2>The Foundation: RSA and ECC</h2>
+                <p>Modern public-key cryptography—primarily RSA (Rivest–Shamir–Adleman) and ECC (Elliptic Curve Cryptography)—relies on mathematical trapdoors. These are functions that are easy to compute in one direction, but practically impossible to reverse without a special key.</p>
+                <p>For RSA, the trapdoor is integer factorization. It's easy to multiply two large prime numbers together, but it takes a supercomputer thousands of years to take the resulting massive number and figure out which two primes created it.</p>
+                
+                <h2>Enter Shor's Algorithm</h2>
+                <p>In 1994, Peter Shor formulated a quantum algorithm that fundamentally changed the landscape of cryptography. Shor's algorithm solves the integer factorization problem and the discrete logarithm problem (the basis for ECC) in polynomial time, rather than exponential time.</p>
+                
+                <blockquote>
+                    "A sufficiently powerful quantum computer running Shor's algorithm will break RSA and ECC encryption in hours, not millennia."
+                </blockquote>
+
+                <p>This event is often referred to as <strong>Q-Day</strong>—the point in time when quantum computers reach sufficient maturity (enough stable logical qubits) to break standard encryption algorithms.</p>
+
+                <h2>"Harvest Now, Decrypt Later"</h2>
+                <p>You might think, "Quantum computers aren't powerful enough yet, so I don't need to worry." This is a dangerous misconception. Nation-state actors are currently engaging in "Harvest Now, Decrypt Later" (HNDL) attacks. They are intercepting and storing massive amounts of encrypted internet traffic today. While they can't read it now, they are saving it in vast data centers, waiting for the day a quantum computer comes online to decrypt state secrets, intelligence, and intellectual property.</p>
+
+                <h2>Post-Quantum Cryptography (PQC)</h2>
+                <p>To defend against Q-Day, cryptographers and organizations like NIST have been racing to develop Post-Quantum Cryptography (PQC) algorithms. These are new mathematical problems that are resistant to both classical and quantum computers.</p>
+
+                <h3>Lattice-Based Cryptography</h3>
+                <p>The most promising family of PQC algorithms relies on lattice problems, specifically the <em>Learning With Errors</em> (LWE) problem. Instead of factoring primes, lattice cryptography involves finding the shortest vector in a multi-dimensional grid—a problem that quantum computers appear to be just as bad at solving as classical computers.</p>
+
+                <pre><code># The transition is already happening.
+# Major tech companies are rolling out hybrid key exchanges.
+# For example, combining classical X25519 with Post-Quantum Kyber-768:
+def hybrid_key_exchange(client, server):
+    classical_shared_secret = X25519(client.pub, server.pub)
+    post_quantum_shared_secret = Kyber768(client.pub, server.pub)
+    
+    # The final key requires breaking BOTH algorithms
+    final_key = KDF(classical_shared_secret + post_quantum_shared_secret)
+    return final_key</code></pre>
+
+                <h2>The Road Ahead</h2>
+                <p>NIST has already standardized the first set of PQC algorithms (like CRYSTALS-Kyber for key establishment and CRYSTALS-Dilithium for digital signatures). The challenge now is migration. Upgrading the world's infrastructure—from web browsers and VPNs to IoT devices and legacy banking systems—will take a decade or more. The quantum clock is ticking.</p>
+            </div>
+
+            <div class="article-author-bio reveal">
+                <div class="bio-text">
+                    <h4>Anand Singh</h4>
+                    <p>Cybersecurity researcher, programmer, and the founder of ASCyber. Passionate about teaching others how to build and defend modern systems.</p>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 Anand Singh Cyber (ASCyber). All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>
